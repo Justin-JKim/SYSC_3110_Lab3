@@ -8,11 +8,22 @@ public class AddressBook {
 		this.list = new LinkedList<BuddyInfo>();
 	}
 	
-	void addBuddy(BuddyInfo add) {
-		list.add(add);
+	public void addBuddy(BuddyInfo add) {
+		if(add != null){
+			list.add(add);
+		}
 	}
 	
-	void removeBuddy(BuddyInfo remove) {
-		list.remove(remove);
+	public void removeBuddy(int index) {
+		if(index >= 0 && index < list.size()) {
+			list.remove(index);
+		}
+	}
+	
+	public static void main(String[] args) {
+		BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+		AddressBook addressBook = new AddressBook();
+		addressBook.addBuddy(buddy);
+		addressBook.removeBuddy(0);
 	}
 }
