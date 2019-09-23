@@ -43,7 +43,6 @@ public class BuddyInfo {
 		BuddyInfo buddy = new BuddyInfo();
 		buddy.setName("Justin");
 		System.out.println("Hello " + buddy.getName());
-
 	}
 
 }
